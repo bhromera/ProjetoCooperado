@@ -1,0 +1,94 @@
+<div style="font-family: 'Open Sans';">
+
+    <div class="row">
+        <h4>Informe o CPF do futuro cooperado (a)</h4>
+        <p class="text-secondary subtitle">
+            Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
+            Digite apenas  os números (sem pontos ou traços).
+        </p>
+    </div>
+    <div class="row">
+        <div class="">   
+            <p class="mb-0"><b>CPF</b></p>
+            <input class="me-2 form-control" 
+                style="width: 300px;height: 35px;display: inline;" 
+                type="text" mask="000.000.000-00" placeholder="000.000.000-00"
+                id="cpf" name="cpf" [(ngModel)]="cpf" required /> 
+
+            <button class="btn button py-1" (click)="cpfSeach()">Consultar por CPF</button>
+        </div>
+    </div>
+
+    <div *ngIf="cpf.length == 11 && cpfValid == true" class="row my-3 ms-1">
+        <div class="card me-3" style="width: 18rem;">
+            <div class="card-body">
+              <h6 class="card-title"><b>Situação cadastral do CPF</b></h6>
+              <h6 class="card-subtitle mb-2 text-secondary subtitle"><small>Consulta na receita federal</small></h6>
+
+              <div class="row">
+                <div class="col-2 mt-2"><i class="bi bi-person-fill top-icon text-secondary"></i></div>
+                <div class="col">
+                    <small class="text-secondary card-label">Nome</small>
+                    <p>Nome cooperado</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-2 mt-2"><i class="bi bi-check-circle top-icon" style="color: #5eb37d;"></i></div>
+                <div class="col">
+                    <small class="text-secondary card-label">Situação do CPF</small>
+                    <p>Regular</p>
+                </div>
+              </div>             
+
+            </div>
+        </div>
+
+        <div class="card me-3" style="width: 18rem;">
+            <div class="card-body">
+              <h6 class="card-title"><b>Conta aplicação</b></h6>
+              <h6 class="card-subtitle mb-2 text-secondary subtitle"><small>Cooperativa Viacredi</small></h6>
+
+              <div class="row">
+                <div class="col-2 mt-2"><i class="bi bi-credit-card top-icon text-secondary"></i></div>
+                <div class="col">
+                    <small class="text-secondary card-label">Número da conta</small>
+                    <p>123456-0</p>
+                </div>
+              </div>
+
+              <div class="row py-3">
+                <b><a href="#" class="link-underline-light link">Duplicar conta</a></b>
+              </div>             
+
+            </div>
+        </div>
+
+        <div class="card me-3" style="width: 18rem;">
+            <div class="card-body">
+              <h6 class="card-title"><b>Conta corrente</b></h6>
+              <h6 class="card-subtitle mb-2 text-secondary subtitle"><small>Cooperativa Viacredi</small></h6>
+
+              <div class="row">
+                <div class="col-2 mt-2"><i class="bi bi-credit-card top-icon text-secondary"></i></div>
+                <div class="col">
+                    <small class="text-secondary card-label">Número da conta</small>
+                    <p>123456-0</p>
+                </div>
+              </div>
+
+              <div class="row py-3">
+                <b><a href="#" class="link-underline-light link">Duplicar conta</a></b>
+              </div>             
+
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="cpf.length == 11 && cpfValid == false" class="row my-3 ms-1">
+        <div class="alert alert-danger" role="alert">
+            O CPF informado, não é um CPF válido.
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,77 @@
+<div class="h-100">
+
+  <div class="row h-100">
+    <div class="d-flex flex-column flex-shrink-0" style="width: 4.7rem; background-color: #165C7D;">
+      <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+        <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="visually-hidden">Icon-only</span>
+      </a>
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+          <a href="#" class="nav-link py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right">
+            <i class="bi bi-list menu-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right">
+            <i class="bi bi-search menu-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right">
+            <i class="bi bi-star menu-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right">
+            <i class="bi bi-chat-right-dots menu-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right">
+            <i class="bi bi-sliders menu-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right">
+            <i class="bi bi-bank menu-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="col" style="height: 5rem; background-color: #fff"> 
+      <div class="row">
+        <div class="d-flex justify-content-between">
+          <div class="p-2">
+            <h3><b>{{this.headerTitle}}</b></h3>
+            <p class="text-secondary subtitle"><small>{{this.subtitle}}</small></p>
+          </div>
+          <div class="row m-4">
+            <div class="col">
+              <a href="#" data-bs-toggle="tooltip" data-bs-placement="right">
+                <i class="bi bi-bell top-icon"></i>
+              </a>
+            </div>
+            <div class="col" style="margin-top: 8px;">
+              <a href="#" class="round-button" data-bs-toggle="tooltip" data-bs-placement="right">
+                <b>VIACREDI</b>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="d-flex align-items-center justify-content-center link-body-emphasis text-decoration-none dropdown-toggle picture" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="35" height="35" class="rounded-circle">
+              </a>
+            </div>
+          </div>
+          
+        </div> 
+      </div>
+      <div class="row m-4">
+        <router-outlet></router-outlet>
+      </div>
+       
+    </div>
+  </div>
+
+</div>
